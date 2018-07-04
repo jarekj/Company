@@ -15,7 +15,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void givenSalariedEmployeeWhenSetHoursWorkedAndHourlyCostThenShouldReturnProperCalculation(){
+    public void givenSalariedEmployeeWhenSetSalaryCostThenShouldReturnProperCalculation(){
         SalariedEmployee salariedEmployee = new SalariedEmployee("Barosz", "Kipek", 2100);
         double actual = salariedEmployee.calculatePaycheck();
         double expected = 1617;

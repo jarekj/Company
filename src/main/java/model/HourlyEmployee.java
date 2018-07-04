@@ -4,7 +4,7 @@ public class HourlyEmployee extends Employee {
     private double hoursWorked;
     private double hourlyCost;
 
-    public HourlyEmployee(String name, String lastName, double hoursWorked, double hourlyCost) {
+    private HourlyEmployee(String name, String lastName, double hoursWorked, double hourlyCost) {
         super(name, lastName);
         this.hoursWorked = hoursWorked;
         this.hourlyCost = hourlyCost;
@@ -43,5 +43,37 @@ public class HourlyEmployee extends Employee {
                 ", hoursWorked= " + hoursWorked +
                 ", hourlyCost= " + hourlyCost +
                 '}';
+    }
+
+    public static class Builder{
+        private String name;
+        private String lastName;
+        private double hoursWorked;
+        private double hourlyCost;
+
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
+
+        public Builder setLastName(String lastName){
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Builder setHoursWorked(double hoursWorked){
+            this.hoursWorked = hoursWorked;
+            return this;
+        }
+
+        public Builder setHourlyCost(double hourlyCost){
+            this.hourlyCost = hourlyCost;
+            return this;
+        }
+
+        public HourlyEmployee build(){
+            return new HourlyEmployee(name, lastName, hoursWorked, hourlyCost);
+        }
+
     }
 }

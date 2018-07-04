@@ -33,4 +33,31 @@ public class SalariedEmployee extends Employee {
                 ", monthlySalary=" + monthlySalary +
                 '}';
     }
+
+    public static class Builder{
+        private String name;
+        private String lastName;
+        private int monthlySalary;
+
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
+
+        public Builder setLastName(String lastName){
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Builder setContractCost(int contractCost){
+            this.monthlySalary = contractCost;
+            return this;
+        }
+
+
+        public SalariedEmployee build(){
+            return new SalariedEmployee(name, lastName, monthlySalary);
+        }
+
+    }
 }

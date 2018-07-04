@@ -33,4 +33,31 @@ public class ContractEmployee extends Employee {
                 ", contractCost=" + contractCost +
                 '}';
     }
+
+    public static class Builder{
+        private String name;
+        private String lastName;
+        private int contractCost;
+
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
+
+        public Builder setLastName(String lastName){
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Builder setContractCost(int contractCost){
+            this.contractCost = contractCost;
+            return this;
+        }
+
+
+        public ContractEmployee build(){
+            return new ContractEmployee(name, lastName, contractCost);
+        }
+
+    }
 }
