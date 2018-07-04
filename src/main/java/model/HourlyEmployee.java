@@ -17,4 +17,31 @@ public class HourlyEmployee extends Employee {
     public void editData() {
 
     }
+
+    public int getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(int hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public int getHourlyCost() {
+        return hourlyCost;
+    }
+
+    public void setHourlyCost(int hourlyCost) {
+        this.hourlyCost = hourlyCost;
+    }
+
+    @Override
+    public String toString() {
+        return "HourlyEmployee{" +
+                " name= " + getName() +
+                ", lastname=" + getLastName() +
+                ", id= " + getUuid() +
+                ", hoursWorked= " + hoursWorked +
+                ", hourlyCost= " + hourlyCost +
+                '}';
+    }
 }

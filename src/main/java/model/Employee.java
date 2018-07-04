@@ -1,16 +1,17 @@
 package model;
 
+
+import java.util.UUID;
+
 public abstract class Employee {
     private String name;
     private String lastName;
-    private int id;
-    private static int count;
+    private UUID uuid;
 
     public Employee(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
-        this.id = count;
-        id++;
+        uuid = UUID.randomUUID();
     }
 
     public String getName() {
@@ -29,8 +30,8 @@ public abstract class Employee {
         this.lastName = lastName;
     }
 
-    public int getId() {
-        return id;
+    public UUID getUuid() {
+        return uuid;
     }
 
     public abstract double calculatePaycheck();

@@ -15,4 +15,22 @@ public class SalariedEmployee extends Employee {
     public void editData() {
 
     }
+
+    public int getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public void setMonthlySalary(int monthlySalary) {
+        this.monthlySalary = monthlySalary;
+    }
+
+    @Override
+    public String toString() {
+        return "SalariedEmployee{" +
+                " name=" + getName() +
+                ", lastname=" + getLastName() +
+                ", id=" + getUuid() +
+                ", monthlySalary=" + monthlySalary +
+                '}';
+    }
 }
