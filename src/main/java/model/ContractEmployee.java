@@ -3,7 +3,7 @@ package model;
 public class ContractEmployee extends Employee {
     private int contractCost;
 
-    public ContractEmployee(String name, String lastName, int contractCost) {
+    private ContractEmployee(String name, String lastName, int contractCost) {
         super(name, lastName);
         this.contractCost = contractCost;
     }
