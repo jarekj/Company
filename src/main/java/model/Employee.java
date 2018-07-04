@@ -1,9 +1,17 @@
 package model;
 
 public abstract class Employee {
-    protected String name;
-    protected String lastName;
-    protected int id;
+    private String name;
+    private String lastName;
+    private int id;
+    private static int count;
+
+    public Employee(String name, String lastName) {
+        this.name = name;
+        this.lastName = lastName;
+        this.id = count;
+        id++;
+    }
 
     public String getName() {
         return name;
@@ -23,10 +31,6 @@ public abstract class Employee {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public abstract double calculatePaycheck();

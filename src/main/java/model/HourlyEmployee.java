@@ -1,11 +1,14 @@
 package model;
 
 public class HourlyEmployee extends Employee {
-    protected int hoursWorked;
-    protected int hourlyCost;
+    private int hoursWorked;
+    private int hourlyCost;
 
-    
-
+    public HourlyEmployee(String name, String lastName, int hoursWorked, int hourlyCost) {
+        super(name, lastName);
+        this.hoursWorked = hoursWorked;
+        this.hourlyCost = hourlyCost;
+    }
 
     public double calculatePaycheck() {
         return hourlyCost * hoursWorked;
