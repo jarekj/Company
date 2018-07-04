@@ -8,7 +8,7 @@ public abstract class Employee {
     private String lastName;
     private UUID uuid;
 
-    public Employee(String name, String lastName) {
+    protected Employee(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
         uuid = UUID.randomUUID();
