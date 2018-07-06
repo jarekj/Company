@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class SalariedEmployeeStrategy implements Strategy {
     public Employee buildEmployee() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj imię: ");
+        System.out.print("Podaj imię: ");
         String name = scanner.nextLine();
-        System.out.println("Podaj nazwisko: ");
+        System.out.print("Podaj nazwisko: ");
         String lastName = scanner.nextLine();
-        System.out.println("Podaj pensję: ");
+        System.out.print("Podaj pensję: ");
         int monthlySalary = scanner.nextInt();
 
         return new SalariedEmployee.Builder()

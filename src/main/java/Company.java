@@ -1,4 +1,5 @@
 import Strategy.*;
+import model.Employee;
 
 import java.util.Scanner;
 
@@ -27,6 +28,8 @@ public class Company {
             default:
                 return;
         }
+        Employee employee = strategy.buildEmployee();
+        System.out.println(employee);
 
 
     }

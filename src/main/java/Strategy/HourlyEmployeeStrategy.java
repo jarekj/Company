@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class HourlyEmployeeStrategy implements Strategy{
     public Employee buildEmployee() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj imię: ");
+        System.out.print("Podaj imię: ");
         String name = scanner.nextLine();
-        System.out.println("Podaj nazwisko: ");
+        System.out.print("Podaj nazwisko: ");
         String lastName = scanner.nextLine();
-        System.out.println("Podaj stawkę godzinową: ");
+        System.out.print("Podaj stawkę godzinową: ");
         double hourlyCost = scanner.nextDouble();
-        System.out.println("Podaj ilość przepracowanych godzin: ");
+        System.out.print("Podaj ilość przepracowanych godzin: ");
         double hoursWorked = scanner.nextDouble();
 
         return new HourlyEmployee.Builder()
