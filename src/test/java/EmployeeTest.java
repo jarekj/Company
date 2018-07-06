@@ -26,7 +26,7 @@ public class EmployeeTest {
         SalariedEmployee salariedEmployee = new SalariedEmployee.Builder()
                 .setName("Bartosz")
                 .setLastName("Kipek")
-                .setContractCost(2100)
+                .setMonthlyCost(2100)
                 .build();
 
         double actual = salariedEmployee.calculatePaycheck();
@@ -92,7 +92,7 @@ public class EmployeeTest {
         SalariedEmployee salariedEmployee = new SalariedEmployee.Builder()
                 .setName("Jerzy")
                 .setLastName("Podbrożny")
-                .setContractCost(1000)
+                .setMonthlyCost(1000)
                 .build();
 
         String expectedName = "Jerzy";

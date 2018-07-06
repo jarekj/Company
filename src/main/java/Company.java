@@ -1,25 +1,32 @@
-import model.ContractEmployee;
-import model.HourlyEmployee;
+import Strategy.*;
+
+import java.util.Scanner;
 
 public class Company {
     public static void main(String[] args) {
+        Strategy strategy;
 
-        ContractEmployee contractEmployee = new ContractEmployee.Builder()
-                .setName("Jarek")
-                .setLastName("Citko")
-                .setContractCost(1800)
-                .build();
+        System.out.println("1. Zbuduj SalaryEmployee");
+        System.out.println("2. Zbuduj HourlyEmployee");
+        System.out.println("3. Zbuduj ContractEmployee");
 
-        System.out.println(contractEmployee);
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
 
-        HourlyEmployee hourlyEmployee = new HourlyEmployee.Builder()
-                .setName("Krzysztof")
-                .setLastName("Zalewski")
-                .setHourlyCost(11.6)
-                .setHoursWorked(40)
-                .build();
 
-        System.out.println(hourlyEmployee + " paycheck " + hourlyEmployee.calculatePaycheck());
+        switch (input) {
+            case 1:
+                strategy = new SalariedEmployeeStrategy();
+                break;
+            case 2:
+                strategy = new HourlyEmployeeStrategy();
+                break;
+            case 3:
+                strategy = new ContractEmployeeStrategy();
+                break;
+            default:
+                return;
+        }
 
 
     }

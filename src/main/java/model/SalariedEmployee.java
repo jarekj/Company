@@ -49,8 +49,8 @@ public class SalariedEmployee extends Employee {
             return this;
         }
 
-        public Builder setContractCost(int contractCost){
-            this.monthlySalary = contractCost;
+        public Builder setMonthlyCost(int monthlyCost){
+            this.monthlySalary = monthlyCost;
             return this;
         }
 
